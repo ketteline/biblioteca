@@ -12,10 +12,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .container{
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -26,7 +28,19 @@
 .container__titulo{
     display: none;
 }
-
+container__botao{
+    display: none;
+}
+.lista-menu{
+    background-color: (--branco);
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+.container__botoa:checked~.lista-menu{
+      display:block;
+}
 @media screen and (min-width: 1024px){
     .container__titulo{
         font-family: var(--fonte-secundaria);
